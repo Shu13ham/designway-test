@@ -11,7 +11,192 @@ $medium-blue-color: #1166b6;
     margin: 0;
     padding: 0;
 }
-body{
-    background:red;
-    font-family: montserrat-400;
+
+.header{
+    .header-logo{
+        img{
+
+        }
+    }
+    nav{
+        .navbar-btn{
+            .login-btn{
+    
+            }
+            .registration-btn{
+                
+            }
+        }
+        .navbar-links{
+            .phone-details{
+
+            }
+            .link-icon{
+
+            }
+            .link-color{
+
+            }
+            .telegram{
+                
+            }
+        }
+    }  
+}
+    
+.main{
+    .hero-container{
+        .hero-bg-img{
+
+        }
+        .hero-title-wrapper{
+            .title-meta-logo{
+
+            }
+            .span{
+
+            }
+        }     
+        .hero-company-stats{
+            .bg-figure-img{
+                img{
+
+                }
+            }  
+            .stats-wrapper{
+                .individual-stats{
+                    .stats-icon{
+                        i{
+
+                        }
+                    }
+                    .stats-info{
+                        .stats-title{
+
+                        }
+                        .stats-value{
+
+                        }
+                    }
+                }
+            } 
+        }
+    } 
+
+    .features-wrapper{
+        .feature{
+            .feature-icon{
+                i{
+                    
+                }
+            }
+            .feature-title{
+
+            }
+        }
+    }    
+
+    .investment-plans{
+        .animated-sphere{
+            .total-supply-wrapper{
+                .total-supply-title{
+                    h5{
+
+                    }
+                    h3{
+
+                    }
+                    h6{
+
+                    }
+                }
+            }
+            .sphere-wrapper{
+                .sphere{
+                    h6{
+
+                    }
+                }
+                .floating-info-wrapper{
+                    .floating-info-title{
+
+                    }
+                    &.default{
+
+                    }
+                }
+                .floating-info-wrapper{
+                    .floating-info-title{
+
+                    }
+                    .floating-info-para{
+                        h3{
+
+                        }
+                        h6{
+
+                        }
+                        i{
+
+                        }
+                        span{
+
+                        }
+                    }
+                    &.on-hover{
+
+                    }
+                }
+            }
+        }
+    }
+    
+    .about-meta{
+        .left-section{
+            .logo-document-wrapper{
+                .emblem{
+                    img{
+
+                    }
+                }
+                .official-document{
+                    img{
+
+                    }
+                } 
+            }
+            .registered-company-info{
+                h5{
+
+                }
+            }
+        }   
+        .right-section{
+            .about-para{
+                p{
+
+                }
+            }
+            .about-read-more-btn{
+                .read-more{
+
+                }
+            }
+        }   
+    }
+}
+
+.section-title-wrapper{
+    .section-title-primary{
+        img{
+            
+        }
+    }
+    .section-title-secondary{
+
+    }
+}
+
+.title-color-gradient{
+
 }
