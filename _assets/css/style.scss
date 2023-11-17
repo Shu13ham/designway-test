@@ -1,0 +1,17 @@
+@import url(./fonts.css);
+
+$primary-color: #eda668;
+$secondary-color: #3a2ece;
+$dark-secondary-color: #3b0a7d;
+$tertiary-color: #e22e92;
+$light-blue-color: #2ac5bd;
+$medium-blue-color: #1166b6;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:red;
+    font-family: montserrat-400;
+}
