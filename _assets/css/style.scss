@@ -8,6 +8,7 @@ $tertiary-color: #ee2281c7;
 $tertiary-light-color: #ea6e66;
 $secondary-light-color: #9b50e575;
 $medium-blue-color: #242cc9a8;
+$light-blue-color: #5e80bf;
 
 *{
     margin: 0;
@@ -283,111 +284,204 @@ body{
         background-image: url('../images/night-sky11.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 50px 15px 115px;
+        padding: 50px 15px 54vh;
         .container{
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .animated-sphere{
-            color: #fff;
-            .total-supply-wrapper{
-                .total-supply-title{
-                    h5{
-
-                    }
-                    h3{
-
-                    }
-                    h6{
-
-                    }
-                }
-            }
-            .sphere-wrapper{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .sphere{
-                    background-image: linear-gradient(to bottom right, $secondary-color 30%, $tertiary-light-color);
-                    border-radius: 50%;
-                    width: 60px;
-                    height: 60px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    margin-top: 5px;
-                    h6{
-
-                    }
-                    .second-line{
-                        font-family: montserrat-700;
-                        line-height: 1;
-                        span{
-                            font-size: 14px;
+        .animated-sphere-wrapper {
+            position: relative;
+            z-index: 0;
+            top: 55vh;
+            .animated-sphere{
+                color: #fff;
+                border-radius: 50%;
+                background: linear-gradient(to right, #000, #000) padding-box, linear-gradient(to bottom right, #5e80bf, #3a2ece, rgba(238, 34, 129, 0.7803921569)) border-box;
+                border: 4px solid transparent;
+                background-color: transparent;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .total-supply-wrapper{
+                    position: absolute;
+                    top: 26%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    .total-supply-title{
+                        display: flex;
+                        flex-direction: column;
+                        .first-line{
+                            text-align: left;
+                        }
+                        .second-line{
+                            font: 60px montserrat-700;
+                            line-height: 1;
+                        }
+                        .third-line{
+                            text-align: right;
                         }
                     }
                 }
-                .floating-info-wrapper.default{
-                    background-image: linear-gradient(to right, $secondary-color 30%, $tertiary-light-color);
-                    padding: 2px 10px;
-                    text-align: center;
-                    border-radius: 25px;
-                    font-size: 12px;
-                    display: inline-block;
-                }
-                .floating-info-wrapper.on-hover{
-                    background-image: linear-gradient(to bottom right, $secondary-dark-color 50%, $secondary-color);
-                    padding: 10px;
-                    border-radius: 25px;
-                    position: relative;
+                .sphere-wrapper{
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    justify-content: center;
-                    background: linear-gradient(to bottom right, $secondary-dark-color 70%, $secondary-color) padding-box,
-                    linear-gradient(to right, $primary-color, $tertiary-color) border-box;
-                    border: 3px solid transparent;
-                    .floating-info-title{
-                        background-image: linear-gradient(to right, #ea6e66, #3a2ece);
+                    position: absolute;
+                    .sphere{
+                        background-image: linear-gradient(to bottom right, $secondary-color 30%, $tertiary-light-color);
+                        border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 5px;
+                        h6{
+    
+                        }
+                        .second-line{
+                            font-family: montserrat-700;
+                            line-height: 1;
+                            span{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .floating-info-wrapper.default{
+                        background-image: linear-gradient(to right, $secondary-color 30%, $tertiary-light-color);
                         padding: 2px 10px;
                         text-align: center;
                         border-radius: 25px;
                         font-size: 12px;
                         display: inline-block;
-                        transform: rotate(270deg) translate(-50%, -50%);
-                        position: absolute;
-                        top: 10%;
-                        left: -15px;
                     }
-                    .min-max-icon{
-                        background-image: linear-gradient(to right, $medium-blue-color, #49c8de);
-                        padding: 5px 7px;
-                        border-radius: 50%;
-                        font-size: 18px;
+                    .floating-info-wrapper.on-hover{
+                        background-image: linear-gradient(to bottom right, $secondary-dark-color 50%, $secondary-color);
+                        padding: 10px;
+                        border-radius: 25px;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: linear-gradient(to bottom right, $secondary-dark-color 70%, $secondary-color) padding-box,
+                        linear-gradient(to right, $primary-color, $tertiary-color) border-box;
+                        border: 3px solid transparent;
+                        .floating-info-title{
+                            background-image: linear-gradient(to right, #ea6e66, #3a2ece);
+                            padding: 2px 10px;
+                            text-align: center;
+                            border-radius: 25px;
+                            font-size: 12px;
+                            display: inline-block;
+                            transform: rotate(270deg) translate(-50%, -50%);
+                            position: absolute;
+                            top: 10%;
+                            left: -15px;
+                        }
+                        .min-max-icon{
+                            background-image: linear-gradient(to right, $medium-blue-color, #49c8de);
+                            padding: 5px 7px;
+                            border-radius: 50%;
+                            font-size: 18px;
+                            margin-left: 5px;
+                        }
+                        .floating-info-para{
+                            margin-left: 30px;
+                            text-align: center;
+                            .percent{
+                                margin-bottom: 5px;
+                                font-weight: bolder;
+                            }
+                            .hours{
+                                margin-bottom: 15px;
+                            }
+                            .min-max{
+                                margin-bottom: 5px;
+                                font-weight: 100;
+                            }
+                            .USD{
+                                margin-bottom: 5px;
+                                font-weight: bolder;
+                            }
+                            .note{
+                                margin-bottom: 5px;
+                            }
+                        }
                     }
-                    .floating-info-para{
-                        margin-left: 30px;
-                        text-align: center;
-                        .percent{
-                            margin-bottom: 5px;
-                            font-weight: bolder;
-                        }
-                        .hours{
-                            margin-bottom: 15px;
-                        }
-                        .min-max{
-                            margin-bottom: 5px;
-                            font-weight: 100;
-                        }
-                        .USD{
-                            margin-bottom: 5px;
-                            font-weight: bolder;
-                        }
-                        .note{
-                            margin-bottom: 5px;
-                        }
+                    &.circle-one-sphere-one{
+                        top: 43%;
+                        left: 43%;
+                        animation: circle-one 36s linear infinite;
                     }
+                    &.circle-two-sphere-one{
+                        top: 42%;
+                        left: 42%;
+                        animation: circle-two 24s linear infinite;
+                    }
+                    &.circle-three-sphere-one{
+                        top: 38%;
+                        left: 38%;
+                        animation: circle-three 12s linear infinite;
+                    }
+                    &.circle-one-sphere-two{
+                        top: 43%;
+                        left: 43%;
+                        animation: circle-one 24s linear infinite;
+                    }
+                    &.circle-two-sphere-two{
+                        top: 42%;
+                        left: 42%;
+                        animation: circle-two 16s linear infinite;
+                    }
+                    &.circle-three-sphere-two{
+                        top: 38%;
+                        left: 38%;
+                        animation: circle-three 8s linear infinite;
+                    }
+                }
+            }
+            .circle-1{
+                width: 750px;
+                height: 750px;
+            }
+            .circle-2{
+                width: 600px;
+                height: 600px;
+            }
+            .circle-3{
+                width: 450px;
+                height: 450px;
+            }
+            .circle-4{
+                width: 300px;
+                height: 300px;
+                background: rgba(128, 128, 128, 0.445);
+            }
+            @keyframes circle-one{
+                0%{
+                  transform:rotate(0deg) translate(375px) rotate(0deg);
+                }
+                100%{
+                  transform:rotate(360deg) translate(375px) rotate(-360deg);
+                }
+            }
+            @keyframes circle-two{
+                0%{
+                    transform:rotate(0deg) translate(300px) rotate(0deg);
+                }
+                100%{
+                    transform:rotate(360deg) translate(300px) rotate(-360deg);
+                }
+            }
+            @keyframes circle-three{
+                0%{
+                    transform:rotate(0deg) translate(225px) rotate(0deg);
+                }
+                100%{
+                    transform:rotate(360deg) translate(225px) rotate(-360deg);
                 }
             }
         }
@@ -398,6 +492,7 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         padding: 50px 15px 115px;
+        position: relative;
         .container{
             display: flex;
             justify-content: center;
@@ -544,6 +639,86 @@ body{
             }
         }
     } 
+    .investment-plans{
+        padding: 50px 15px 45vh !important;
+    }
+    .animated-sphere-wrapper{
+        top: 45vh !important;
+        .animated-sphere{
+            .sphere-wrapper{
+                &.circle-one-sphere-one{
+                    top: 41% !important;
+                    left: 42% !important;
+                    animation: circle-one-tab 36s linear infinite !important;
+                }
+                &.circle-two-sphere-one{
+                    top: 39% !important;
+                    left: 39% !important;
+                    animation: circle-two-tab 24s linear infinite !important;
+                }
+                &.circle-three-sphere-one{
+                    top: 36% !important;
+                    left: 36% !important;
+                    animation: circle-three-tab 12s linear infinite !important;
+                }
+                &.circle-one-sphere-two{
+                    top: 41% !important;
+                    left: 42% !important;
+                    animation: circle-one-tab 24s linear infinite !important;
+                }
+                &.circle-two-sphere-two{
+                    top: 39% !important;
+                    left: 39% !important;
+                    animation: circle-two-tab 16s linear infinite !important;
+                }
+                &.circle-three-sphere-two{
+                    top: 36% !important;
+                    left: 36% !important;
+                    animation: circle-three-tab 8s linear infinite !important;
+                }
+            }
+        }
+        .circle-1{
+            width: 600px !important;
+            height: 600px !important;
+        }
+        .circle-2{
+            width: 500px !important;
+            height: 500px !important;
+        }
+        .circle-3{
+            width: 400px !important;
+            height: 400px !important;
+        }
+        .circle-4{
+            width: 300px !important;
+            height: 300px !important;
+        }
+        @keyframes circle-one-tab{
+            0%{
+              transform:rotate(0deg) translate(300px) rotate(0deg);
+            }
+            100%{
+              transform:rotate(360deg) translate(300px) rotate(-360deg);
+            }
+        }
+        @keyframes circle-two-tab{
+            0%{
+                transform:rotate(0deg) translate(250px) rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg) translate(250px) rotate(-360deg);
+            }
+        }
+        @keyframes circle-three-tab{
+            0%{
+                transform:rotate(0deg) translate(200px) rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg) translate(200px) rotate(-360deg);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -625,7 +800,184 @@ body{
                 grid-gap: 25px;
             }
         } 
+        .investment-plans{
+            padding: 50px 15px 20vh !important;
+        }
     } 
+    .animated-sphere-wrapper{
+        top: 20vh !important;
+        .total-supply-title{
+            .first-line{
+                text-align: left;
+                font: 10px montserrat-700;
+            }
+            .second-line{
+                font: 32px montserrat-700 !important;
+                line-height: 0.8 !important;
+            }
+            .third-line{
+                text-align: right;
+                font: 10px montserrat-700;
+            }
+        }
+        .sphere-wrapper{
+            .sphere{
+                width: 35px !important;
+                height: 35px !important;
+                margin-top: 3px !important;
+                font-size: 10px !important;
+                .second-line{
+                    span{
+                        font-size: 10px !important;
+                    }
+                }
+            }
+            .floating-info-wrapper.default{
+                padding: 2px 5px !important;
+                font-size: 10px !important;
+            }
+            .floating-info-wrapper.on-hover{
+                padding: 6px !important;
+                border: 2px solid transparent !important;
+                .floating-info-title{
+                    padding: 2px 5px !important;
+                    font-size: 10px !important;
+                    top: 4% !important;
+                    left: -8px !important;
+                }
+                .min-max-icon{
+                    padding: 5px 7px !important;
+                    font-size: 10px !important;
+                }
+                .floating-info-para{
+                    margin-left: 30px;
+                    font-size: 10px !important;
+                    .percent{
+                        margin-bottom: 2px !important;
+                    }
+                    .hours{
+                        margin-bottom: 6px !important;
+                    }
+                    .min-max{
+                        margin-bottom: 2px !important;
+                    }
+                    .USD{
+                        margin-bottom: 2px !important;
+                    }
+                    .note{
+                        margin-bottom: 2px !important;
+                    }
+                    .percent, .hours, .min-max, .USD, .note{
+                        font-size: 10px !important;
+                    }
+                }
+            }
+            &.circle-one-sphere-one{
+                top: 43%;
+                left: 43%;
+                animation: circle-one 36s linear infinite;
+            }
+            &.circle-two-sphere-one{
+                top: 42%;
+                left: 42%;
+                animation: circle-two 24s linear infinite;
+            }
+            &.circle-three-sphere-one{
+                top: 38%;
+                left: 38%;
+                animation: circle-three 12s linear infinite;
+            }
+            &.circle-one-sphere-two{
+                top: 43%;
+                left: 43%;
+                animation: circle-one 24s linear infinite;
+            }
+            &.circle-two-sphere-two{
+                top: 42%;
+                left: 42%;
+                animation: circle-two 16s linear infinite;
+            }
+            &.circle-three-sphere-two{
+                top: 38%;
+                left: 38%;
+                animation: circle-three 8s linear infinite;
+            }
+        }
+        .animated-sphere{
+            .sphere-wrapper{
+                &.circle-one-sphere-one{
+                    top: 41% !important;
+                    left: 42% !important;
+                    animation: circle-one-tab 36s linear infinite !important;
+                }
+                &.circle-two-sphere-one{
+                    top: 39% !important;
+                    left: 39% !important;
+                    animation: circle-two-tab 24s linear infinite !important;
+                }
+                &.circle-three-sphere-one{
+                    top: 36% !important;
+                    left: 36% !important;
+                    animation: circle-three-tab 12s linear infinite !important;
+                }
+                &.circle-one-sphere-two{
+                    top: 41% !important;
+                    left: 42% !important;
+                    animation: circle-one-tab 24s linear infinite !important;
+                }
+                &.circle-two-sphere-two{
+                    top: 39% !important;
+                    left: 39% !important;
+                    animation: circle-two-tab 16s linear infinite !important;
+                }
+                &.circle-three-sphere-two{
+                    top: 36% !important;
+                    left: 36% !important;
+                    animation: circle-three-tab 8s linear infinite !important;
+                }
+            }
+        }
+        .circle-1{
+            width: 300px !important;
+            height: 300px !important;
+        }
+        .circle-2{
+            width: 250px !important;
+            height: 250px !important;
+        }
+        .circle-3{
+            width: 200px !important;
+            height: 200px !important;
+        }
+        .circle-4{
+            width: 150px !important;
+            height: 150px !important;
+        }
+        @keyframes circle-one-tab{
+            0%{
+              transform:rotate(0deg) translate(150px) rotate(0deg);
+            }
+            100%{
+              transform:rotate(360deg) translate(150px) rotate(-360deg);
+            }
+        }
+        @keyframes circle-two-tab{
+            0%{
+                transform:rotate(0deg) translate(175px) rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg) translate(175px) rotate(-360deg);
+            }
+        }
+        @keyframes circle-three-tab{
+            0%{
+                transform:rotate(0deg) translate(150px) rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg) translate(150px) rotate(-360deg);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 375px){
@@ -655,4 +1007,11 @@ body{
             top: -60px !important;
         }
     }
+}
+
+.d-none{
+    display: none !important;
+}
+.d-block{
+    display: block !important;
 }
