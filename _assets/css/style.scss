@@ -77,6 +77,12 @@ body {
                 line-height: 1;
                 font: 25px montserrat-700;
                 color: #fff;
+                cursor: pointer;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    color: #ffa403;
+                }
             }
         }
 
@@ -100,6 +106,17 @@ body {
                         position: relative;
                         top: 2px;
                     }
+
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        color: $primary-color;
+
+                        span {
+                            color: #fff
+                        }
+                    }
                 }
 
                 .link-color {
@@ -111,6 +128,17 @@ body {
 
                     i {
                         font-size: 20px;
+                    }
+
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        color: $primary-color;
+
+                        span {
+                            color: #fff
+                        }
                     }
                 }
 
@@ -138,6 +166,19 @@ body {
             flex-direction: column;
             align-items: center;
             margin-bottom: 180px;
+            animation: left-right-animation 2s ease-in-out;
+
+            @keyframes left-right-animation {
+                0% {
+                    transform: translate(-350px, 0);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translate(0px, 0);
+                    opacity: 1;
+                }
+            }
 
             .first-line {
                 // font: 18px montserrat-700;
@@ -176,9 +217,6 @@ body {
                 letter-spacing: 2px;
             }
 
-            .title-meta-logo {}
-
-            .span {}
         }
 
         .hero-company-stats {
@@ -196,6 +234,24 @@ body {
 
             .stats-wrapper {
                 padding-bottom: 1px;
+                transition: all 0.5s ease-in-out;
+
+                &.fade-up-animation {
+                    animation: fade-up-animation 2.5s ease-in-out;
+                    opacity: 0;
+
+                    @keyframes fade-up-animation {
+                        0% {
+                            transform: translate(0, 0);
+                            opacity: 1;
+                        }
+
+                        100% {
+                            transform: translate(0px, -350px);
+                            opacity: 0;
+                        }
+                    }
+                }
 
                 .individual-stats {
                     display: flex;
@@ -207,6 +263,19 @@ body {
                     background-image: linear-gradient(to bottom right, $secondary-color 30%, $tertiary-light-color);
                     padding: 15px 5px;
                     border-radius: 5px;
+                    animation: bottom-up-animation 2.5s ease-in-out;
+
+                    @keyframes bottom-up-animation {
+                        0% {
+                            transform: translate(0, 150px);
+                            opacity: 0;
+                        }
+
+                        100% {
+                            transform: translate(0px, 0);
+                            opacity: 1;
+                        }
+                    }
 
                     i {
                         color: #fff;
@@ -222,6 +291,7 @@ body {
                         justify-content: center;
                         margin-left: 10px;
                         border: 1px solid #ffffff96;
+                        transition: all 0.3s linear;
 
                         i {
                             font-size: 20px;
@@ -238,6 +308,22 @@ body {
                             letter-spacing: 2px;
                             font: 20px montserrat-700;
                             text-align: right;
+                        }
+                    }
+
+                    transition: all 0.3s linear;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.05);
+
+                        .stats-icon {
+                            background: #fff;
+
+                            i {
+                                color: $tertiary-color;
+                                ;
+                            }
                         }
                     }
                 }
@@ -341,7 +427,7 @@ body {
     }
 
     .investment-plans {
-        background-image: url('../images/night-sky11.jpg');
+        background-image: url('../images/night-sky1.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         padding: 50px 15px 54vh;
@@ -711,6 +797,17 @@ body {
     .section-title-secondary {
         font: 60px montserrat-700;
         margin-left: 2px;
+    }
+
+    &.onAppear {
+        transition: transform 1000ms ease-in-out;
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+
+    &.visible {
+        opacity: 0;
+        transform: translate(-450px, 0px);
     }
 }
 
@@ -1206,6 +1303,6 @@ body {
     display: none !important;
 }
 
-.d-block {
-    display: block !important;
+.d-flex {
+    display: flex !important;
 }

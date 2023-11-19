@@ -61,6 +61,11 @@ body {
   line-height: 1;
   font: 25px montserrat-700;
   color: #fff;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.header-hero-wrapper .header .header-logo h1:hover {
+  color: #ffa403;
 }
 .header-hero-wrapper .header nav {
   display: flex;
@@ -76,19 +81,37 @@ body {
   right: 0;
   top: -12px;
 }
+.header-hero-wrapper .header nav .navbar-links .phone-details {
+  transition: all 0.3s linear;
+}
 .header-hero-wrapper .header nav .navbar-links .phone-details i {
   font-size: 15px;
   position: relative;
   top: 2px;
+}
+.header-hero-wrapper .header nav .navbar-links .phone-details:hover {
+  transform: scale(1.05);
+  color: #eda668;
+}
+.header-hero-wrapper .header nav .navbar-links .phone-details:hover span {
+  color: #fff;
 }
 .header-hero-wrapper .header nav .navbar-links .link-color {
   color: #eda668;
 }
 .header-hero-wrapper .header nav .navbar-links .telegram {
   margin-left: 20px;
+  transition: all 0.3s linear;
 }
 .header-hero-wrapper .header nav .navbar-links .telegram i {
   font-size: 20px;
+}
+.header-hero-wrapper .header nav .navbar-links .telegram:hover {
+  transform: scale(1.05);
+  color: #eda668;
+}
+.header-hero-wrapper .header nav .navbar-links .telegram:hover span {
+  color: #fff;
 }
 .header-hero-wrapper .header nav .navbar-links .phone-details,
 .header-hero-wrapper .header nav .navbar-links .telegram {
@@ -108,6 +131,17 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 180px;
+  animation: left-right-animation 2s ease-in-out;
+}
+@keyframes left-right-animation {
+  0% {
+    transform: translate(-350px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0);
+    opacity: 1;
+  }
 }
 .header-hero-wrapper .hero-container .hero-title-wrapper .first-line {
   font: 30px montserrat-700;
@@ -148,6 +182,21 @@ body {
 }
 .header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper {
   padding-bottom: 1px;
+  transition: all 0.5s ease-in-out;
+}
+.header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper.fade-up-animation {
+  animation: fade-up-animation 2.5s ease-in-out;
+  opacity: 0;
+}
+@keyframes fade-up-animation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, -350px);
+    opacity: 0;
+  }
 }
 .header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .individual-stats {
   display: flex;
@@ -159,6 +208,19 @@ body {
   background-image: linear-gradient(to bottom right, #3a2ece 30%, #ea6e66);
   padding: 15px 5px;
   border-radius: 5px;
+  animation: bottom-up-animation 2.5s ease-in-out;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+@keyframes bottom-up-animation {
+  0% {
+    transform: translate(0, 150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0);
+    opacity: 1;
+  }
 }
 .header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .individual-stats i {
   color: #fff;
@@ -173,6 +235,7 @@ body {
   justify-content: center;
   margin-left: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5882352941);
+  transition: all 0.3s linear;
 }
 .header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .individual-stats .stats-icon i {
   font-size: 20px;
@@ -185,6 +248,15 @@ body {
   letter-spacing: 2px;
   font: 20px montserrat-700;
   text-align: right;
+}
+.header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .individual-stats:hover {
+  transform: scale(1.05);
+}
+.header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .individual-stats:hover .stats-icon {
+  background: #fff;
+}
+.header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .individual-stats:hover .stats-icon i {
+  color: rgba(238, 34, 129, 0.7803921569);
 }
 .header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .first-row,
 .header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .second-row,
@@ -267,7 +339,7 @@ body {
   margin-top: 5px;
 }
 .main .investment-plans {
-  background-image: url("../images/night-sky11.jpg");
+  background-image: url("../images/night-sky1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 15px 54vh;
@@ -566,6 +638,15 @@ body {
 .section-title-wrapper .section-title-secondary {
   font: 60px montserrat-700;
   margin-left: 2px;
+}
+.section-title-wrapper.onAppear {
+  transition: transform 1000ms ease-in-out;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.section-title-wrapper.visible {
+  opacity: 0;
+  transform: translate(-450px, 0px);
 }
 
 .title-color-gradient {
@@ -945,6 +1026,6 @@ body {
   display: none !important;
 }
 
-.d-block {
-  display: block !important;
+.d-flex {
+  display: flex !important;
 }/*# sourceMappingURL=style.css.map */
