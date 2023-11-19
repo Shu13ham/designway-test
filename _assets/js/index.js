@@ -22,7 +22,7 @@ function createFloatingObjects() {
       imgElement.alt = "";
 
       imgElement.style.bottom = `${Math.random() * window.innerHeight}px`;
-      imgElement.style.left = `${Math.random() * 90}%`;
+      imgElement.style.left = `${Math.random() * 75}%`;
       imgElement.style.width = `${Math.random() * 50 + 30}px`;
 
       const animationDuration = Math.random() * 10 + 4;
@@ -63,7 +63,6 @@ function isTablet() {
 
   return isTouch && (isTabletSize || isHighPixelRatio);
 }
-
 function addClassToInvestmentPlans() {
   const investmentPlans = document.querySelectorAll(".investment-plans");
 

@@ -65,7 +65,7 @@ body {
   transition: all 0.3s linear;
 }
 .header-hero-wrapper .header .header-logo h1:hover {
-  color: #ffa403;
+  color: #eda668;
 }
 .header-hero-wrapper .header nav {
   display: flex;
@@ -171,6 +171,9 @@ body {
   font: 48px montserrat-700;
   letter-spacing: 2px;
 }
+.header-hero-wrapper .hero-container .hero-title-wrapper .third-line span {
+  font-size: 48px;
+}
 .header-hero-wrapper .hero-container .hero-company-stats .bg-figure-img img {
   position: absolute;
   left: 50%;
@@ -246,7 +249,7 @@ body {
 }
 .header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .individual-stats .stats-info .stats-value {
   letter-spacing: 2px;
-  font: 20px montserrat-700;
+  font: 24px montserrat-700;
   text-align: right;
 }
 .header-hero-wrapper .hero-container .hero-company-stats .stats-wrapper .individual-stats:hover {
@@ -308,7 +311,7 @@ body {
   left: -2px !important;
   width: 50px;
   height: 50px;
-  box-shadow: 0px 0px 8px 7px rgba(68, 207, 200, 0.2588235294);
+  box-shadow: 0px 0px 8px 7px rgba(22, 183, 229, 0.3019607843);
 }
 .main .features-wrapper .feature .feature-icon {
   position: relative;
@@ -329,9 +332,9 @@ body {
   top: 0px;
   left: 15px;
   z-index: 0;
-  background: rgba(68, 207, 200, 0.2588235294);
+  background: rgba(22, 183, 229, 0.3019607843);
   border-radius: 50%;
-  box-shadow: 0px 0px 5px 6px rgba(68, 207, 200, 0.2588235294);
+  box-shadow: 0px 0px 10px 10px rgba(22, 183, 229, 0.3019607843);
   transition: all 0.3s linear;
 }
 .main .features-wrapper .feature .feature-title {
@@ -447,7 +450,7 @@ body {
   left: -15px;
 }
 .main .investment-plans .animated-sphere-wrapper .animated-sphere .sphere-wrapper .floating-info-wrapper.on-hover .min-max-icon {
-  background-image: linear-gradient(to right, rgba(36, 44, 201, 0.6588235294), #49c8de);
+  background-image: linear-gradient(to right, rgba(36, 44, 201, 0.6588235294), #5e80bf);
   padding: 5px 7px;
   border-radius: 50%;
   font-size: 18px;
@@ -547,7 +550,7 @@ body {
   }
 }
 .main .about-meta {
-  background-image: linear-gradient(to bottom right, rgba(36, 44, 201, 0.6588235294), rgba(155, 80, 229, 0.4588235294)), url(../images/night-sky11.jpg);
+  background-image: linear-gradient(to bottom right, rgba(37, 3, 83, 0.4509803922), rgba(255, 0, 177, 0.4588235294)), url(../images/night-sky11.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 15px 115px;
@@ -582,7 +585,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background-image: linear-gradient(to bottom right, #3a2ece 30%, #ea6e66);
-  padding: 15px;
+  padding: 20px 25px;
   border-radius: 20px;
   transition: transform 0.3s linear;
   cursor: pointer;
@@ -592,7 +595,7 @@ body {
 }
 .main .about-meta .left-section .registered-company-info .company-count {
   font: 30px montserrat-700;
-  margin: 5px 0;
+  margin: 6px 0;
 }
 .main .about-meta .right-section {
   flex: 1 1;
@@ -691,7 +694,7 @@ body {
   background: linear-gradient(hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
 }
 .glossy-button.blue-glossy-btn {
-  background-image: linear-gradient(to right, rgba(36, 44, 201, 0.6588235294), #49c8de, rgba(36, 44, 201, 0.6588235294));
+  background-image: linear-gradient(to right, rgba(36, 44, 201, 0.6588235294), #5e80bf, rgba(36, 44, 201, 0.6588235294));
 }
 .glossy-button.red-glossy-btn {
   margin-left: 5px;
@@ -783,6 +786,12 @@ body {
     100% {
       transform: rotate(360deg) translate(200px) rotate(-360deg);
     }
+  }
+  .section-title-wrapper .section-title-primary img {
+    width: 32px;
+  }
+  .section-title-wrapper .section-title-secondary {
+    font-size: 45px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -967,6 +976,9 @@ body {
     width: 90px;
   }
   .header-hero-wrapper .hero-container .hero-title-wrapper .third-line {
+    font-size: 24px;
+  }
+  .header-hero-wrapper .hero-container .hero-title-wrapper .third-line span {
     font-size: 24px;
   }
   .header-hero-wrapper .header .container {

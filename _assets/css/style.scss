@@ -9,6 +9,8 @@ $tertiary-light-color: #ea6e66;
 $secondary-light-color: #9b50e575;
 $medium-blue-color: #242cc9a8;
 $light-blue-color: #5e80bf;
+$sky-blue-color: #5e80bf;
+$greenish-blue-color: #16b7e54d;
 
 * {
     margin: 0;
@@ -81,7 +83,7 @@ body {
                 transition: all 0.3s linear;
 
                 &:hover {
-                    color: #ffa403;
+                    color: $primary-color;
                 }
             }
         }
@@ -158,8 +160,6 @@ body {
         position: relative;
         z-index: 1;
 
-        .hero-bg-img {}
-
         .hero-title-wrapper {
             color: #fff;
             display: flex;
@@ -181,7 +181,6 @@ body {
             }
 
             .first-line {
-                // font: 18px montserrat-700;
                 font: 30px montserrat-700;
                 position: absolute;
                 top: -50px;
@@ -215,6 +214,9 @@ body {
                 // font: 22px montserrat-700;
                 font: 48px montserrat-700;
                 letter-spacing: 2px;
+                span{
+                    font-size:48px;
+                }
             }
 
         }
@@ -306,7 +308,7 @@ body {
 
                         .stats-value {
                             letter-spacing: 2px;
-                            font: 20px montserrat-700;
+                            font: 24px montserrat-700;
                             text-align: right;
                         }
                     }
@@ -388,7 +390,7 @@ body {
                     left: -2px !important;
                     width: 50px;
                     height: 50px;
-                    box-shadow: 0px 0px 8px 7px #44cfc842;
+                    box-shadow: 0px 0px 8px 7px $greenish-blue-color;
                 }
             }
 
@@ -412,9 +414,9 @@ body {
                     top: 0px;
                     left: 15px;
                     z-index: 0;
-                    background: #44cfc842;
+                    background: $greenish-blue-color;
                     border-radius: 50%;
-                    box-shadow: 0px 0px 5px 6px #44cfc842;
+                    box-shadow: 0px 0px 10px 10px $greenish-blue-color;
                     transition: all 0.3s linear;
                 }
             }
@@ -454,7 +456,7 @@ body {
             .animated-sphere {
                 color: #fff;
                 border-radius: 50%;
-                background: linear-gradient(to right, #000, #000) padding-box, linear-gradient(to bottom right, #5e80bf, #3a2ece, rgba(238, 34, 129, 0.7803921569)) border-box;
+                background: linear-gradient(to right, #000, #000) padding-box, linear-gradient(to bottom right, $light-blue-color, $secondary-color, $tertiary-color) border-box;
                 border: 4px solid transparent;
                 background-color: transparent;
                 position: absolute;
@@ -504,8 +506,6 @@ body {
                         justify-content: center;
                         margin-top: 5px;
 
-                        h6 {}
-
                         .second-line {
                             font-family: montserrat-700;
                             line-height: 1;
@@ -538,7 +538,7 @@ body {
                         border: 3px solid transparent;
 
                         .floating-info-title {
-                            background-image: linear-gradient(to right, #ea6e66, #3a2ece);
+                            background-image: linear-gradient(to right, $tertiary-light-color, $secondary-color);
                             padding: 2px 10px;
                             text-align: center;
                             border-radius: 25px;
@@ -551,7 +551,7 @@ body {
                         }
 
                         .min-max-icon {
-                            background-image: linear-gradient(to right, $medium-blue-color, #49c8de);
+                            background-image: linear-gradient(to right, $medium-blue-color, $sky-blue-color);
                             padding: 5px 7px;
                             border-radius: 50%;
                             font-size: 18px;
@@ -679,7 +679,7 @@ body {
     }
 
     .about-meta {
-        background-image: linear-gradient(to bottom right, $medium-blue-color, $secondary-light-color), url(../images/night-sky11.jpg);
+        background-image: linear-gradient(to bottom right, #25035373, #ff00b175), url(../images/night-sky11.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         padding: 50px 15px 115px;
@@ -722,7 +722,7 @@ body {
                 left: 50%;
                 transform: translateX(-50%);
                 background-image: linear-gradient(to bottom right, $secondary-color 30%, $tertiary-light-color);
-                padding: 15px;
+                padding: 20px 25px;
                 border-radius: 20px;
                 transition: transform 0.3s linear;
                 cursor: pointer;
@@ -731,11 +731,9 @@ body {
                     transform: scale(1.05) translate(-50%);
                 }
 
-                h5 {}
-
                 .company-count {
                     font: 30px montserrat-700;
-                    margin: 5px 0;
+                    margin: 6px 0;
                 }
             }
         }
@@ -858,7 +856,7 @@ body {
     }
 
     &.blue-glossy-btn {
-        background-image: linear-gradient(to right, $medium-blue-color, #49c8de, $medium-blue-color);
+        background-image: linear-gradient(to right, $medium-blue-color, $sky-blue-color, $medium-blue-color);
     }
 
     &.red-glossy-btn {
@@ -978,6 +976,18 @@ body {
             100% {
                 transform: rotate(360deg) translate(200px) rotate(-360deg);
             }
+        }
+    }
+
+    .section-title-wrapper {
+        .section-title-primary {
+            img {
+                width: 32px;
+            }
+        }
+
+        .section-title-secondary {
+            font-size: 45px;
         }
     }
 }
@@ -1226,7 +1236,10 @@ body {
                 }
 
                 .third-line {
-                    font-size: 24px
+                    font-size: 24px;
+                    span{
+                        font-size: 24px;
+                    }
                 }
             }
         }
