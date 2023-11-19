@@ -884,11 +884,11 @@ body {
     }
 
     .investment-plans {
-        padding: 50px 15px 45vh !important;
+        padding: 50px 15px 55vh !important;
     }
 
     .animated-sphere-wrapper {
-        top: 45vh !important;
+        top: 55vh !important;
 
         .animated-sphere {
             .sphere-wrapper {
@@ -984,19 +984,19 @@ body {
 
 @media screen and (max-width: 650px) {
     .main .investment-plans {
-        padding: 50px 15px 20vh !important;
+        padding: 50px 15px 30vh !important;
 
         &.is-tab {
-            padding: 50px 15px 20vh !important;
+            padding: 50px 15px 23vh !important;
 
             .animated-sphere-wrapper {
-                top: 20vh !important;
+                top: 23vh !important;
             }
         }
     }
 
     .animated-sphere-wrapper {
-        top: 20vh !important;
+        top: 30vh !important;
 
         .total-supply-title {
             .first-line {
