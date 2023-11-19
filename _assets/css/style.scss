@@ -432,6 +432,14 @@ body {
         background-size: cover;
         padding: 50px 15px 54vh;
 
+        &.is-tab {
+            padding: 50px 15px 30vh !important;
+
+            .animated-sphere-wrapper {
+                top: 30vh !important;
+            }
+        }
+
         .container {
             display: flex;
             justify-content: center;
@@ -587,7 +595,7 @@ body {
 
                     &.circle-two-sphere-one {
                         top: 41%;
-                        left: 39%;
+                        left: 43%;
                         animation: circle-two 24s linear infinite;
                     }
 
@@ -605,7 +613,7 @@ body {
 
                     &.circle-two-sphere-two {
                         top: 41%;
-                        left: 39%;
+                        left: 43%;
                         animation: circle-two 16s linear infinite;
                     }
 
@@ -816,7 +824,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    // font: 25px montserrat-800;
+    font: 25px montserrat-800;
 }
 
 .glossy-button {
@@ -975,8 +983,16 @@ body {
 }
 
 @media screen and (max-width: 650px) {
-    .investment-plans {
+    .main .investment-plans {
         padding: 50px 15px 20vh !important;
+
+        &.is-tab {
+            padding: 50px 15px 20vh !important;
+
+            .animated-sphere-wrapper {
+                top: 20vh !important;
+            }
+        }
     }
 
     .animated-sphere-wrapper {
@@ -1077,7 +1093,7 @@ body {
 
                 &.circle-two-sphere-one {
                     top: 34% !important;
-                    left: 31% !important;
+                    left: 36% !important;
                     animation: circle-two-mob 24s linear infinite !important;
                 }
 
@@ -1095,7 +1111,7 @@ body {
 
                 &.circle-two-sphere-two {
                     top: 34% !important;
-                    left: 31% !important;
+                    left: 36% !important;
                     animation: circle-two-mob 16s linear infinite !important;
                 }
 
@@ -1255,9 +1271,23 @@ body {
             .container {
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 25px;
+                display: grid;
             }
         }
     }
+
+    .section-title-wrapper {
+        .section-title-primary {
+            img {
+                width: 32px;
+            }
+        }
+
+        .section-title-secondary {
+            font-size: 45px;
+        }
+    }
+
 }
 
 @media screen and (max-width: 375px) {

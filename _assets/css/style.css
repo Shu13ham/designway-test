@@ -344,6 +344,12 @@ body {
   background-size: cover;
   padding: 50px 15px 54vh;
 }
+.main .investment-plans.is-tab {
+  padding: 50px 15px 30vh !important;
+}
+.main .investment-plans.is-tab .animated-sphere-wrapper {
+  top: 30vh !important;
+}
 .main .investment-plans .container {
   display: flex;
   justify-content: center;
@@ -476,7 +482,7 @@ body {
 }
 .main .investment-plans .animated-sphere-wrapper .animated-sphere .sphere-wrapper.circle-two-sphere-one {
   top: 41%;
-  left: 39%;
+  left: 43%;
   animation: circle-two 24s linear infinite;
 }
 .main .investment-plans .animated-sphere-wrapper .animated-sphere .sphere-wrapper.circle-three-sphere-one {
@@ -491,7 +497,7 @@ body {
 }
 .main .investment-plans .animated-sphere-wrapper .animated-sphere .sphere-wrapper.circle-two-sphere-two {
   top: 41%;
-  left: 39%;
+  left: 43%;
   animation: circle-two 16s linear infinite;
 }
 .main .investment-plans .animated-sphere-wrapper .animated-sphere .sphere-wrapper.circle-three-sphere-two {
@@ -654,6 +660,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font: 25px montserrat-800;
 }
 
 .glossy-button {
@@ -779,8 +786,14 @@ body {
   }
 }
 @media screen and (max-width: 650px) {
-  .investment-plans {
+  .main .investment-plans {
     padding: 50px 15px 20vh !important;
+  }
+  .main .investment-plans.is-tab {
+    padding: 50px 15px 20vh !important;
+  }
+  .main .investment-plans.is-tab .animated-sphere-wrapper {
+    top: 20vh !important;
   }
   .animated-sphere-wrapper {
     top: 20vh !important;
@@ -857,7 +870,7 @@ body {
   }
   .animated-sphere-wrapper .animated-sphere .sphere-wrapper.circle-two-sphere-one {
     top: 34% !important;
-    left: 31% !important;
+    left: 36% !important;
     animation: circle-two-mob 24s linear infinite !important;
   }
   .animated-sphere-wrapper .animated-sphere .sphere-wrapper.circle-three-sphere-one {
@@ -872,7 +885,7 @@ body {
   }
   .animated-sphere-wrapper .animated-sphere .sphere-wrapper.circle-two-sphere-two {
     top: 34% !important;
-    left: 31% !important;
+    left: 36% !important;
     animation: circle-two-mob 16s linear infinite !important;
   }
   .animated-sphere-wrapper .animated-sphere .sphere-wrapper.circle-three-sphere-two {
@@ -983,6 +996,13 @@ body {
   .main .features-wrapper .container {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 25px;
+    display: grid;
+  }
+  .section-title-wrapper .section-title-primary img {
+    width: 32px;
+  }
+  .section-title-wrapper .section-title-secondary {
+    font-size: 45px;
   }
 }
 @media screen and (max-width: 375px) {
